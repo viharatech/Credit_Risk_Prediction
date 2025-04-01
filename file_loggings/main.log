@@ -1,0 +1,89 @@
+2025-04-01 19:44:07,965 - INFO - The Data Loaded successfully
+2025-04-01 19:44:07,965 - INFO - The number of rows : 150002 and columns : 18
+2025-04-01 19:44:08,026 - WARNING - The Features with Null values : ['NPA Status', 'RevolvingUtilizationOfUnsecuredLines', 'age', 'Gender', 'Region', 'MonthlyIncome', 'Rented_OwnHouse', 'Occupation', 'Education', 'NumberOfTime30-59DaysPastDueNotWorse', 'DebtRatio', 'MonthlyIncome.1', 'NumberOfOpenCreditLinesAndLoans', 'NumberOfTimes90DaysLate', 'NumberRealEstateLoansOrLines', 'NumberOfTime60-89DaysPastDueNotWorse', 'NumberOfDependents', 'Good_Bad']
+2025-04-01 19:44:08,126 - WARNING - The Features with Null values : ['MonthlyIncome', 'MonthlyIncome.1', 'NumberOfDependents']
+2025-04-01 19:44:11,636 - WARNING - Both Features has same data : MonthlyIncome : MonthlyIncome.1
+2025-04-01 19:44:11,712 - INFO - Training data size : (120000, 120000)
+2025-04-01 19:44:11,712 - INFO - Testing data size : (30000, 30000)
+2025-04-01 19:44:11,713 - INFO - Dtype of Monthly Income : float64
+2025-04-01 19:44:11,713 - INFO - Dtype of NumberofDependents : object
+2025-04-01 19:44:11,760 - INFO - Dtype of NumberofDependents : float64
+2025-04-01 19:44:11,903 - INFO - Null values in training data : NPA Status                              0
+RevolvingUtilizationOfUnsecuredLines    0
+age                                     0
+Gender                                  0
+Region                                  0
+Rented_OwnHouse                         0
+Occupation                              0
+Education                               0
+NumberOfTime30-59DaysPastDueNotWorse    0
+DebtRatio                               0
+NumberOfOpenCreditLinesAndLoans         0
+NumberOfTimes90DaysLate                 0
+NumberRealEstateLoansOrLines            0
+NumberOfTime60-89DaysPastDueNotWorse    0
+MonthlyIncome_ran_sam                   0
+NumberOfDependents_ran_sam              0
+dtype: int64
+2025-04-01 19:44:11,913 - INFO - Null values in training data : NPA Status                              0
+RevolvingUtilizationOfUnsecuredLines    0
+age                                     0
+Gender                                  0
+Region                                  0
+Rented_OwnHouse                         0
+Occupation                              0
+Education                               0
+NumberOfTime30-59DaysPastDueNotWorse    0
+DebtRatio                               0
+NumberOfOpenCreditLinesAndLoans         0
+NumberOfTimes90DaysLate                 0
+NumberRealEstateLoansOrLines            0
+NumberOfTime60-89DaysPastDueNotWorse    0
+MonthlyIncome_ran_sam                   0
+NumberOfDependents_ran_sam              0
+dtype: int64
+2025-04-01 19:44:11,941 - INFO - categorical columns from the data : Index(['Gender', 'Region', 'Rented_OwnHouse', 'Occupation', 'Education'], dtype='object')
+2025-04-01 19:44:12,343 - INFO - Converted to Log Level :
+2025-04-01 19:44:12,425 - INFO - outliers from Training data and Test data handled succesfully
+2025-04-01 19:44:12,425 - INFO - Feature Engineering completed : Know we will combine num and cat columns
+2025-04-01 19:44:12,469 - INFO - Concatination Successfull
+2025-04-01 19:44:12,470 - INFO - Training data size : (120000, 21)
+2025-04-01 19:44:12,470 - INFO - Testing data size : (30000, 21)
+2025-04-01 19:44:12,519 - INFO - Columns with 0.1 variance where removed : Index(['NPA Status', 'RevolvingUtilizationOfUnsecuredLines', 'age',
+       'NumberOfTime30-59DaysPastDueNotWorse', 'NumberOfTimes90DaysLate',
+       'NumberOfTime60-89DaysPastDueNotWorse'],
+      dtype='object')
+2025-04-01 19:44:12,529 - INFO - After removing unwanted columns : (120000, 15)
+2025-04-01 19:44:12,636 - INFO - After removing unwanted columns using Hypothesis Testing: (120000, 10)
+2025-04-01 19:44:12,636 - INFO - After removing unwanted columns using Hypothesis Testing : (30000, 10)
+2025-04-01 19:44:12,636 - INFO - Before Upsampling Technique
+2025-04-01 19:44:12,650 - INFO - Number of rows for 0 -> : 8070
+2025-04-01 19:44:12,663 - INFO - Number of rows for 1 -> : 111930
+2025-04-01 19:44:13,094 - INFO - After Upsampling Technique
+2025-04-01 19:44:13,120 - INFO - Number of rows for 0 -> : 111930
+2025-04-01 19:44:13,144 - INFO - Number of rows for 1 -> : 111930
+2025-04-01 19:44:13,161 - INFO - info :    DebtRatio  NumberOfOpenCreditLinesAndLoans  NumberRealEstateLoansOrLines  ...  Region_East  Region_North  Region_West
+0   0.261041                         1.609438                      0.000000  ...          0.0           0.0          1.0
+1   0.607226                         2.484907                      0.693147  ...          0.0           0.0          0.0
+2   0.258764                         1.945910                      0.000000  ...          0.0           0.0          0.0
+
+[3 rows x 10 columns]
+2025-04-01 19:44:13,232 - INFO - info : [[-0.4669084  -0.83520465 -1.09271625 ... -0.3491308  -0.56589962
+   1.4451961 ]
+ [-0.3267496   0.77219105  0.32284412 ... -0.3491308  -0.56589962
+  -0.69274938]
+ [-0.4678303  -0.21742814 -1.09271625 ... -0.3491308  -0.56589962
+  -0.69274938]
+ ...
+ [-0.40833575  0.64868982  1.15089385 ... -0.3491308   1.76897287
+  -0.69274938]
+ [-0.56533299 -1.77310098 -1.09271625 ... -0.3491308  -0.56589962
+  -0.69274938]
+ [ 1.57197564 -1.77310098 -1.09271625 ... -0.3491308  -0.56589962
+   1.4451961 ]]
+2025-04-01 19:44:13,470 - INFO - Model prediction : Good Customer
+2025-04-01 19:44:13,470 - INFO - column names : Index(['DebtRatio', 'NumberOfOpenCreditLinesAndLoans',
+       'NumberRealEstateLoansOrLines', 'MonthlyIncome_ran_sam',
+       'NumberOfDependents_ran_sam', 'Education', 'Region_Central',
+       'Region_East', 'Region_North', 'Region_West'],
+      dtype='object')
